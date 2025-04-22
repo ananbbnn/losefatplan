@@ -3,13 +3,22 @@
 	2. 建立計畫:建立減肥計畫表
 	3. 查詢計畫:用計畫ID查詢別人創建的計劃表
 	4. 網站資訊:網站製作人、資料來源
-2. 計畫表資料
+2. 資料庫
 	1. plan_info:
-		plan_id : 自動生成，用於查詢
-		plan_password : 設定密碼，防止個人資料外洩
+		id (Primary Key) : 資料的唯一識別碼
 		user_name : 使用者姓名
+		plan_password : 設定密碼，防止個人資料外洩
 		height : 身高
 		weight : 體重
+		start_date : 開始日期
+		end_date : 結束日期
+		month_goal : 每月目標
+		final_goal : 最終目標
+	2. weight_data:
+		id (Primary Key) : 資料的唯一識別碼
+		plan_id (Foreign Key) : 關聯到計畫資料的外鍵，用以識別是哪個計劃的體重資料
+		weight_date : 記錄體重資料的日期
+		weight_value : 記錄當天的體重值
 		
 		
 		
